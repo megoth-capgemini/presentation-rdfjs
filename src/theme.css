@@ -1,0 +1,43 @@
+:root {
+    --r-background-color: white;
+    --r-main-font: Verdana;
+    /*--r-main-font-size: 3rem;*/
+    --r-main-color: #6C797B;
+    /*--r-block-margin: #{$blockMargin};*/
+    /*--r-heading-margin: #{$headingMargin};*/
+    --r-heading-font: Verdana;
+    --r-heading-color: #0c5b9d;
+    /*--r-heading-line-height: #{$headingLineHeight};*/
+    /*--r-heading-letter-spacing: #{$headingLetterSpacing};*/
+    /*--r-heading-text-transform: #{$headingTextTransform};*/
+    /*--r-heading-text-shadow: #{$headingTextShadow};*/
+    /*--r-heading-font-weight: #{$headingFontWeight};*/
+    /*--r-heading1-text-shadow: #{$heading1TextShadow};*/
+    /*--r-heading1-size: #{$heading1Size};*/
+    /*--r-heading2-size: #{$heading2Size};*/
+    /*--r-heading3-size: #{$heading3Size};*/
+    /*--r-heading4-size: #{$heading4Size};*/
+    /*--r-code-font: #{$codeFont};*/
+    --r-link-color: #0c5b9d;
+    /*--r-link-color-dark: #{darken($linkColor , 15% )};*/
+    /*--r-link-color-hover: #{$linkColorHover};*/
+    /*--r-selection-background-color: #{$selectionBackgroundColor};*/
+    /*--r-selection-color: #{$selectionColor};*/
+    /*--r-overlay-element-bg-color: #{$overlayElementBgColor};*/
+    /*--r-overlay-element-fg-color: #{$overlayElementFgColor};*/
+}
+
+.reveal-viewport {
+    background-image: url("./logo.png");
+    background-position: top 1em right 1em;
+    background-repeat: no-repeat;
+    background-size: 5em;
+}
+
+.copyright {
+    color: #ddd;
+    font-size: 0.9rem;
+    position: fixed;
+    bottom: 1em;
+    left: 1em;
+}
