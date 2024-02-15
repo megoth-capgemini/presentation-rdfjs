@@ -34,5 +34,8 @@
 }
 
 .reveal pre code {
-    max-height: none;
+    max-height: 90vh;
+    @media screen and (min-width: 1024px) {
+        max-height: 40vh;
+    }
 }

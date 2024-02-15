@@ -1,5 +1,7 @@
 const number: number = 42;
-const string: string = "Something"
+let string = "Something" // TS will infer type
+string = "Something else" // allowed
+string = 1337 // not allowed
 
 type MyType = {
     id: number

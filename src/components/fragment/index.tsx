@@ -5,5 +5,5 @@ interface Props {
 }
 
 export default function Fragment({children}: Props) {
-    return <li className="fragment">{children}</li>
+    return <p className="fragment">{children}</p>
 }
