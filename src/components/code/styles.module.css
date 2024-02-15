@@ -1,0 +1,31 @@
+.container {
+    margin-bottom: 1.5rem;
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+    font-size: 0.85rem;
+    @media screen and (min-width: 769px) {
+        font-size: 0.9rem;
+    }
+    @media screen and (min-width: 1024px) {
+        font-size: 1rem;
+    }
+}
+
+.code.code {
+    :global(.number),
+    :global(.tag) {
+        align-items: inherit;
+        background-color: transparent;
+        border-radius: 0;
+        display: unset;
+        font-family: inherit;
+        font-size: inherit;
+        height: auto;
+        line-height: inherit;
+        margin: 0;
+        padding: 0;
+        text-align: inherit;
+    }
+}
