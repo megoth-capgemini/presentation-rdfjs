@@ -14,6 +14,8 @@ import ToolsIntro from "./40-tools-intro.mdx";
 import ToolsRdflib from "./41-rdflib.mdx";
 import ToolsLDO from "./42-ldo.mdx";
 import ToolsShapes from "./43-ldo-cont.mdx";
+import ConclusionIntro from "./50-conclusion.mdx";
+import ConclusionThanks from "./51-thanks.mdx";
 import "./theme.css";
 
 export default function Slides() {
@@ -21,7 +23,7 @@ export default function Slides() {
         <section id="intro"><Intro/></section>
         <section id="overview"><Overview/></section>
         <section>
-            <section id="rdf-intro"><RdfIntro/></section>
+            <section id="rdf"><RdfIntro/></section>
             <section id="rdf-semantic"><RdfSemantics/></section>
             <section id="rdf-triples"><RdfTriples/></section>
             <section id="rdf-models"><RdfModels/></section>
@@ -30,15 +32,19 @@ export default function Slides() {
             <section id="rdf-turtle"><RdfTurtle/></section>
         </section>
         <section>
-            <section id="javascript-intro"><JavaScriptIntro/></section>
+            <section id="javascript"><JavaScriptIntro/></section>
             <section id="javascript-syntax"><JavaScriptSyntax/></section>
             <section id="javascript-types"><JavaScriptTypes/></section>
         </section>
         <section>
-            <section id="tools-intro"><ToolsIntro/></section>
+            <section id="tools"><ToolsIntro/></section>
             <section id="tools-rdflib"><ToolsRdflib/></section>
             <section id="tools-ldo"><ToolsLDO/></section>
             <section id="tools-shapes"><ToolsShapes/></section>
+        </section>
+        <section>
+            <section id="conclusion"><ConclusionIntro/></section>
+            <section id="conclusion-thanks"><ConclusionThanks/></section>
         </section>
     </div>
 }
