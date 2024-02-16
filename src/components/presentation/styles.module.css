@@ -5,10 +5,3 @@
     bottom: 1em;
     left: 1em;
 }
-
-.reveal {
-    background-image: url("./capgemini-logo.png");
-    background-position: top 1em right 1em;
-    background-repeat: no-repeat;
-    background-size: 3em;
-}
