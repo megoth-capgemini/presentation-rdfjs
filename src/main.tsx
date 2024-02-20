@@ -7,11 +7,12 @@ import {
 import Presentation from "./components/presentation";
 import Controller from "./components/controller";
 import Layout from "./components/layout";
+import BroadcastChannelContextProvider from "./hooks/use-broadcast-channel/provider.tsx";
 
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <Layout />,
+        element: <BroadcastChannelContextProvider><Layout/></BroadcastChannelContextProvider>,
         children: [
             {
                 index: true,
