@@ -1,24 +1,23 @@
 import Reveal from 'reveal.js';
-import {useLayoutEffect} from "react";
+import {useEffect} from "react";
 import "reveal.js/dist/reset.css";
 import "reveal.js/dist/reveal.css";
 import "reveal.js/dist/theme/dracula.css";
-import styles from "./styles.module.css";
 import Slides from "../slides";
-
-const deck = new Reveal({
-    hash: true
-});
+import styles from "./styles.module.css";
+import {clsx} from "clsx";
 
 export default function Presentation() {
-    useLayoutEffect(() => {
-        deck.initialize();
+    useEffect(() => {
+        const deck = new Reveal({
+            hash: true
+        });
+        deck.initialize({
+            embedded: true
+        });
     }, []);
 
-    return (
-        <div className="reveal">
-            <Slides />
-            <div className={styles.copyright}>&copy; Capgemini {new Date().getFullYear()}. All rights reserved</div>
-        </div>
-    )
+    return <div className={clsx("reveal", styles.reveal)}>
+        <Slides/>
+    </div>
 }
