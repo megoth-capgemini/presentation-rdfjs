@@ -1,0 +1,22 @@
+import Code from "../code";
+import ldoExample from "./code/ldo-example.ts?raw";
+
+### Linked Data Objects (LDO)
+
+<Code language="typescript" code={ldoExample}/>
+
+<aside className="notes">
+    Linked Data Objects is a relative new library. It utilizes ShEx shapes to describe data models, and provides an API
+    that should be easier for JavaScript developers to understand. ShEx is yet another RDF-based standard, which might
+    be an unknown standard for many. That said, I would argue that ShEx is easy to get into for developers.
+
+    I would argue that the code here is much easier to read than the previous slide, as it relies less on RDF-specific
+    concepts and is more aligned to basic JavaScript-syntax.
+
+    Another important thing to note is that LDO encapsulates information about context so that when you've done changes
+    in objects that are derived from a LDO dataset, it will know about those changes. This means that it isn't purely
+    functional, and might be a turn-off for those adhering to functional programming.
+
+    If following the functional programming paradigm is a must for you, I encourage you to check out Inrupt's JavaScript
+    Client libraries.
+</aside>

@@ -1,0 +1,25 @@
+[
+  {
+    "@context": "https://example.com/context.jsonld",
+    "@id": "https://example.com/resource/arne",
+    "@type": "Person",
+    "socialName": "Arne Hassel",
+    "jobTitle": [
+      {
+        "@value": "Senior Consultant",
+        "@language": "en"
+      },
+      {
+        "@value": "Seniorkonsulent",
+        "@language": "nb-no"
+      }
+    ],
+    "worksFor": "https://example.com/resource/capgemini"
+  },
+  {
+    "@context": "https://example.com/context.jsonld",
+    "@id": "https://example.com/resource/capgemini",
+    "@type": "Organization",
+    "name": "Capgemini"
+  }
+]

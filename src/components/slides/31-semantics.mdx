@@ -1,0 +1,20 @@
+### Semantics
+
+URLs &#10084;
+
+<aside className="notes">
+    A very important part of RDF is the use of URLs, normally called addresses. A node is either a URL or a literal,
+    meaning a value of some sort (e.g. strings, numbers, dates). This allow us to link data with clear, formally defined
+    terms and remove ambiguity from our data models.
+
+    Take the example of a the term `name`. Given the context it can mean a person's formal, full name, or their first
+    name, or maybe even their preferred alias. Assigning URLs for each of these meaning allow us to communicate to
+    others the explicit meaning you have when using that term.
+
+    The URLs for predicates are usually grouped into vocabularies (which are themselves graphs), aka ontologies. This
+    allow us to centralize URLs contextually, allowing readers to learn about sets of URLs that are useful to combine.
+
+    (As an aside it should be noted that RDF has been spearheaded by Tim-Berners Lee, the "father of the web", who
+    formally defined URL, and has been vital in the creation of RDF as well. "HTML is for communicating data to humans,
+    RDF is for communicating data to machines.")
+</aside>

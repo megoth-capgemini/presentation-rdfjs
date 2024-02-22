@@ -1,0 +1,22 @@
+import Code from "../code";
+import basicSyntax from "./code/js-example.js?raw";
+
+### Syntax
+
+<Code language="javascript" code={basicSyntax}/>
+
+<aside className="notes">
+    In this example we can see 15 statements altogether (not to be confused with RDF statements). Note that statements
+    can be concluded with a semi-colon, but I've omitted that here for readability.
+
+    JavaScript provide several ways of describing variables: `var`, `let`, and `const`. The difference between them
+    isn't important to understand for this presentation, but they are slightly different, e.g. `const` describes
+    constants and cannot be instantiated anew (i.e. line 6 wouldn't be allowed).
+
+    JavaScript provides several data-types, such as numbers, strings, dates, objects, arrays, sets, and functions.
+    Functions can be named or anonymous, which can be shortened using a arrow notation.
+
+    JavaScript is a dynamic language, allowing types to be defined implicitly. This means that a variable that was
+    initially set as a number can be changed into containing a string. This can be very useful, but also introduce bugs
+    because of unexpected types. One way of mitigating this is with types, which we can get by using TypeScript.
+</aside>

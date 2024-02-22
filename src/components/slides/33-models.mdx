@@ -1,0 +1,25 @@
+### Data models
+
+![Larger, more complex model, with multiple triples](./profile.png)
+
+<aside className="notes">
+    Using triples we can describe larger graphs. The graph you can see here consist of seven triples.
+
+    Let start with the subject `:arne`. (By the way, when a URL has no prefix it means it's defined locally in the
+    document in which it resides; In this example it means that it doesn't matter where it's specifically defined.)
+
+    This node has a type which is described with the triple `:arne a foaf:Person`.
+    `foaf` is a prefix for Friend of a friend, which is a popular vocabulary to describe social relations. `a` is a
+    shorthand for rdf:type, which is a common URL describing a relationship between a node and their class, and finally
+    `foaf:Person` is a class designated to describe people.
+
+    Another triple we can see is `:arne foaf:name "Arne Hassel"`. Here the object is a literal, the string "Arne
+    Hassel". Another thing to note is the use of `foaf:name` and `schema:name` - the former is used in combination with
+    a person, while the latter is used for a thing, the organization Capgemini.
+
+    A last thing to note is the use of ampersands and literals. This allow us to describe which language a literal is
+    described in.
+
+    It should be noted that you can also denote which datatype a literal is, but that's beyond the scope of this
+    presentation.
+</aside>

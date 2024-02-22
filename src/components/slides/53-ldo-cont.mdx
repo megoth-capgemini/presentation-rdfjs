@@ -1,0 +1,26 @@
+import Code from "../code";
+import shexExample from "../../shapes/profile.shex?raw";
+
+### How does LDO work?
+
+Shapes
+
+<Code language="turtle" code={shexExample}/>
+
+And a build-step
+
+<Code language="bash" hideLines={true} code="ldo build --input ./src/shapes --output ./src/ldo"/>
+
+<aside className="notes">
+    ShEx looks a bit like Turtle. The syntax is a bit more complex though in order to support useful features such as
+    cardinality. For example, in this example we see in line 6 that foaf:name is expected to have one value. But by
+    post-fixing a question-mark after `xsd:string` the value would be optional. We could also post-fix a plus sign,
+    which would mean one-or-more values, or an asterisk, which would mean zero or more values.
+
+    LDO also requires us to convert the ShEx resources into LDO resources, which usually means providing a build-step in
+    our build setup. One of the resources created is a type definition in TypeScript, which allow us to ensure that the
+    values we set to our models are correct.
+
+    For me this last part is vital, as it clears out a lot of confusion that might arise when updating our models.
+</aside>
+

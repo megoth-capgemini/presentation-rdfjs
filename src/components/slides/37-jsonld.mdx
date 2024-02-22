@@ -1,0 +1,16 @@
+import Code from "../code";
+import jsonldExample from "./code/jsonld-example.json?raw";
+
+### JSON-LD example
+
+<Code language="json" code={jsonldExample}/>
+
+<aside className="notes">
+    Here is the same example described using JSON-LD. I won't go into the details here, but I would argue that JSON-LD
+    is a bit more verbose that Turtle and harder to read. Some of it can be mitigated in `@context`, which I'll show in
+    the next slide, but in general I prefer Turtle. The best argument for JSON-LD is that it should be more familiar to
+    developers who are used to JSON.
+
+    It should also be noted that developers can skip prefixes altogether with a well-defined @context, which might make
+    it more readable.
+</aside>
