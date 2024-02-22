@@ -16,7 +16,6 @@ const set = new Set([42, 42, "Thank you for all the fish"])
 function myFunction(variable) {
     return variable + 1
 }
-const anonymousFunction = function (variable) {
-    return variable + 1
-}
+const result = myFunction(42)
 const arrowFunction = (variable) => variable + 1
+const result2 = arrowFunction(1337)

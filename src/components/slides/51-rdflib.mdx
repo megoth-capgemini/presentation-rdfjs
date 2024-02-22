@@ -6,9 +6,9 @@ import rdflibExample from "./code/rdflib-example.ts?raw"
 <Code language="typescript" code={rdflibExample}/>
 
 <aside className="notes">
-    rdflib.js is the oldest JavaScript-library that's still used in development. It's age is apparent in some of its API
-    design, but is by far the most reliable library out there. (An example of this is the use of callback functions on
-    lines 9-12 and lines 21-24.)
+    rdflib.js is probably the oldest RDF-compatible JavaScript-library that's still being maintained. It's age is
+    apparent in some of its API design, but is by far the most reliable library out there. (An example old-style
+    syntax is the use of callback functions on lines 9-12 and lines 21-24 instead of Promises.)
 
     The data is initialized into memory by using the class `Store`, which is created by `graph()`. The class exposes API
     to add and remove statements, which we can see use of in lines 16-17. These methods take a statement, which for line
