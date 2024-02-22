@@ -1,24 +1,42 @@
 import useBroadcastChannel from "../../hooks/use-broadcast-channel";
 import {useEffect} from "react";
-import throttle from "../../lib/throttle.ts";
+import {isControlKey, throttle} from "../../lib/events.ts";
+import Slides from "../slides";
+import Content from "../content";
+import styles from "./styles.module.css";
 
 export default function Controller() {
     const bc = useBroadcastChannel();
 
     useEffect(() => {
         function keyupListener(event: KeyboardEvent) {
-            if (event.key === "Shift" || event.key === "Meta") return;
             bc.postMessage({
-                type: event.type,
+                type: "controlKey",
                 key: event.key,
                 shiftKey: event.shiftKey,
             });
         }
 
-        window.addEventListener("keyup", event => {
+        window.addEventListener("keydown", event => {
+            if (!isControlKey(event.key) || event.key === "Shift" || event.key === "Meta") return;
+            event.preventDefault();
             throttle(() => keyupListener(event), 100);
-        });
+        })
+
+        bc.onmessage = (event) => {
+            if (event.data.type !== "currentSlide") return;
+            Array.prototype.forEach.call(document.getElementsByClassName("active"), (el) => {
+                el.classList.remove("active");
+            });
+            const currentSlide = document.getElementById(event.data.currentSlideId);
+            if (currentSlide) {
+                currentSlide.classList.add("active");
+                currentSlide.scrollIntoView({behavior: "smooth"});
+            }
+        }
     }, [bc]);
 
-    return <>TEST</>;
+    return <Content className={styles.controller}>
+        <Slides/>
+    </Content>
 }

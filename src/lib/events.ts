@@ -2,7 +2,7 @@
 //initialize throttlePause variable outside throttle function
 let throttlePause: boolean;
 
-const throttle = (callback: () => void, time: number) => {
+export function throttle(callback: () => void, time: number) {
     //don't run the function if throttlePause is true
     if (throttlePause) return;
 
@@ -16,6 +16,25 @@ const throttle = (callback: () => void, time: number) => {
         //throttlePause is set to false once the function has been called, allowing the throttle function to loop
         throttlePause = false;
     }, time);
-};
+}
 
-export default throttle;
+export function isControlKey(key: string) {
+    return key === " " || key === "Escape" || key === "ArrowRight" || key === "ArrowLeft" || key === "ArrowUp" || key === "ArrowDown" || key === "o";
+}
+
+export type RevealEvent = {
+    currentSlide: {
+        id: string
+    },
+    previousSlide?: {
+        id: string
+    }
+}
+
+export function createCurrentSlideEvent(event: RevealEvent) {
+    return {
+        type: "currentSlide",
+        currentSlideId: event.currentSlide.id,
+        previousSlideId: event.previousSlide?.id,
+    }
+}

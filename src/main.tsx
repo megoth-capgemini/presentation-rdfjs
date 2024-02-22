@@ -19,7 +19,7 @@ const router = createBrowserRouter([
                 element: <Presentation/>,
             },
             {
-                path: "/:presentationId",
+                path: "/controller",
                 element: <Controller/>,
             },
         ]

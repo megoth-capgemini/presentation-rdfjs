@@ -1,5 +1,5 @@
 import Reveal from 'reveal.js';
-import {useEffect} from "react";
+import {useLayoutEffect} from "react";
 import "reveal.js/dist/reset.css";
 import "reveal.js/dist/reveal.css";
 import "reveal.js/dist/theme/dracula.css";
@@ -7,18 +7,27 @@ import Slides from "../slides";
 import styles from "./styles.module.css";
 import {clsx} from "clsx";
 import useBroadcastChannel from "../../hooks/use-broadcast-channel";
+import {createCurrentSlideEvent, RevealEvent} from "../../lib/events.ts";
 
 export default function Presentation() {
     const bc = useBroadcastChannel();
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         const deck = new Reveal({
             embedded: true,
             hash: true
         });
-        deck.initialize();
+        deck.initialize().then(() => {
+            bc.postMessage(createCurrentSlideEvent({currentSlide: {id: deck.getCurrentSlide().id}}))
+        });
+
+        deck.on("slidetransitionend", (event) => {
+            bc.postMessage(createCurrentSlideEvent(event as unknown as RevealEvent))
+        })
+
+        // allow other windows to control presentation
         bc.onmessage = (event) => {
-            if (event.data.type !== "keyup") return;
+            if (event.data.type !== "controlKey") return;
             switch (true) {
                 case event.data.key === " " && event.data.shiftKey:
                     return deck.prev();
