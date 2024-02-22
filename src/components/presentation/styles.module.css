@@ -1,7 +1,3 @@
-.copyright {
-    color: #ddd;
-    font-size: 0.9rem;
-    position: fixed;
-    bottom: 1em;
-    left: 1em;
+.reveal {
+    height: 95vh;
 }

@@ -1,0 +1,31 @@
+.copyright {
+    font-size: 0.9rem;
+}
+
+.controller {
+    color: #ddd;
+    display: flex;
+    font-size: 1rem;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+
+.controllerIcon {
+    padding-top: 2px;
+}
+
+.controllerText {
+    display: none;
+    @media screen and (min-width: 600px) {
+        display: block;
+    }
+}
+
+.footer {
+    align-items: center;
+    color: #ddd;
+    display: flex;
+    justify-content: space-between;
+    height: 5vh;
+    margin: 0 1rem;
+}

@@ -1,0 +1,27 @@
+.controller.controller {
+    color: #5f6364;
+
+    & :global(.notes) {
+        color: black;
+        font-size: 1.5rem;
+        & p {
+            margin: 1rem 0;
+        }
+    }
+
+    & :global(.active) {
+        background-color: #ffffe0;
+
+        & section {
+            background-color: transparent;
+        }
+    }
+
+    & h2 img {
+        max-width: 35%;
+    }
+
+    & section {
+        padding: 1rem 2rem;
+    }
+}

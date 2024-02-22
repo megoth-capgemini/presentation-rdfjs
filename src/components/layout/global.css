@@ -1,0 +1,6 @@
+html,
+body,
+#root {
+    font-family: Verdana, sans-serif;
+    min-height: 100vh;
+}
