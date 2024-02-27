@@ -17,7 +17,8 @@ import JavaScriptTypes from "./42-typescript.mdx";
 import ToolsIntro from "./50-tools-intro.mdx";
 import ToolsRdflib from "./51-rdflib.mdx";
 import ToolsLDO from "./52-ldo.mdx";
-import ToolsShapes from "./53-ldo-cont.mdx";
+import ToolsLDO2 from "./53-ldo-cont.mdx";
+import ToolsSpecifications from "./54-specifications.mdx";
 import ConclusionIntro from "./60-conclusion.mdx";
 import ConclusionMore from "./61-more.mdx";
 import ConclusionThanks from "./62-thanks.mdx";
@@ -51,7 +52,8 @@ export default function Slides() {
             <section id="tools"><ToolsIntro/></section>
             <section id="tools-rdflib"><ToolsRdflib/></section>
             <section id="tools-ldo"><ToolsLDO/></section>
-            <section id="tools-shapes"><ToolsShapes/></section>
+            <section id="tools-ldo-2"><ToolsLDO2/></section>
+            <section id="tools-specifications"><ToolsSpecifications/></section>
         </section>
         <section>
             <section id="conclusion"><ConclusionIntro/></section>
